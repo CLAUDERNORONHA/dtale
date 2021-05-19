@@ -19,17 +19,12 @@ class ReactMenuTooltip extends React.Component {
     if (this.props.visible) {
       const rect = this.props.element.getBoundingClientRect();
       const top = rect.top - (this.props.menuPinned ? 0 : rect.height - 26);
-      this.setState(
-        {
-          style: {
-            display: "block",
-            top: top,
-            left: rect.left + rect.width + 8, // 8 = width of tooltip caret
-          },
-          lastElementRect: rect,
-        },
-        this.checkForWindowEdge
-      );
+      const style = {
+        display: "block",
+        top: top,
+        left: rect.left + rect.width + 8, // 8 = width of tooltip caret
+      };
+      this.setState({ style: style, lastElementRect: rect }, this.checkForWindowEdge);
     } else {
       this.setState({
         style: { display: "none" },
@@ -54,7 +49,9 @@ class ReactMenuTooltip extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.visible !== prevProps.visible) {
+    const currTop = this.props.element?.getBoundingClientRect()?.top;
+    const prevTop = prevProps.element?.getBoundingClientRect()?.top;
+    if (this.props.visible !== prevProps.visible || currTop !== prevTop) {
       this.computeStyle();
     }
   }

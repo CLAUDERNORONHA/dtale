@@ -49,7 +49,8 @@
     "Highlight": "Highlight",
     "Missing Analysis": "Missing Analysis",
     "show_hide": "Show/Hide Columns",
-    "Predefined Filters": "Predefined Filters"
+    "Predefined Filters": "Predefined Filters",
+    "Max Width": "Max Width"
   },
   "menu_description": {
     "describe": "Describe column's values (Top unique values, Min, Max, Sum, STD, Var,...)",
@@ -89,7 +90,8 @@
     "clear_data": "Remove this data from memory. If this is the only data loaded into memory then you will be redirected to the \"Load Data\" screen.",
     "open_process": "There are multiple pieces of data loaded into memory, switch the UI to this data.",
     "missingno": "Analyze the presence of missing data (NaN) using the \"missingno\" package.",
-    "predefined_filters": "Apply any \"Predefined Filters\" to your data. You would have loaded these using the \"dtale.predefined_filters.set_filters\" or \"dtale.predefined_filters.add_filters\" functions."
+    "predefined_filters": "Apply any \"Predefined Filters\" to your data. You would have loaded these using the \"dtale.predefined_filters.set_filters\" or \"dtale.predefined_filters.add_filters\" functions.",
+    "max_width": "Rebuild the widths of the cells in the grid and set a maximum width in pixels.  Anything that exceeds this maximum will have a tooltip available on hover to view the full value."
   },
   "column_menu": {
     "Asc": "Asc",

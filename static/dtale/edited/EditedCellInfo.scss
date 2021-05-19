@@ -1,0 +1,13 @@
+.edited-cell-info {
+  overflow: hidden;
+  margin: 0 !important;
+  height: 0;
+  transition: height .5s;
+
+  &.is-expanded {
+    height: fit-content;
+    border-top: 1px solid rgb(221, 221, 221);
+    padding-bottom: 0.25rem !important;
+    padding-top: 0.25rem !important;
+  }
+}

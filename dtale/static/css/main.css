@@ -36,6 +36,12 @@
   visibility: hidden;
 }
 
+#textarea-measure {
+  position: absolute;
+  float: left;
+  visibility: hidden;
+}
+
 body.dark-mode,
 div.preview.dark-mode {
   background-color: black !important;
